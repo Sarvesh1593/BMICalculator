@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">FastTrack</string>
+    <string name="BMI">BMI Calculator</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="weight">Weight</string>
+    <string name="kg">kg</string>
+    <string name="_56">56</string>
+    <string name="_19">19</string>
+    <string name="m">cm</string>
+    <string name="height">Height</string>
+    <string name="age">Age</string>
+    <string name="calculate">Calculate</string>
+    <string name="bmi_category">BMI Category:</string>
+    <string name="under_weight">Under_Weight</string>
+    <string name="normal_weight">Normal Weight</string>
+    <string name="over_weight">Over Weight</string>
+    <string name="recalculate">Recalculate</string>
+    <string name="normal">Your normal BMI is a testament to your dedication to health. To maintain this status, continue to make mindful choices when it comes to meals and remain active with regular exercise.</string>
+    <string name="over_comment">Your normal BMI reflects your commitment to maintaining a healthy lifestyle. To continue progressing towards optimal health, consider incorporating regular exercise into your routine and making nutritious meal choices. By staying active and mindful of your food intake, you can transition from overweight to a healthier, normal weight. Keep up the dedication to your well-being!</string>
+</resources>
