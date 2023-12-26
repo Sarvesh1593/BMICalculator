@@ -26,7 +26,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:fontFamily="@font/inter_extra_bold"
         android:text="@string/BMI"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_large"
@@ -42,7 +41,6 @@
         android:layout_height="wrap_content"
         android:text="@string/gender"
         android:textColor="@color/text"
-        android:fontFamily="@font/inter_bold"
         android:textSize="15sp"
         android:layout_marginStart="22dp"
         android:layout_marginTop="20dp"
@@ -92,7 +90,6 @@
                     android:layout_width="35dp"
                     android:layout_height="18dp"
                     android:layout_marginStart="35dp"
-                    android:fontFamily="@font/inter_medium"
                     android:text="@string/male"
                     android:textColor="@color/text"
                     android:textSize="15sp" />
@@ -134,7 +131,6 @@
                     android:layout_width="52dp"
                     android:layout_height="@dimen/text_height"
                     android:layout_marginStart="25dp"
-                    android:fontFamily="@font/inter_medium"
                     android:text="@string/female"
                     android:textColor="@color/text"
                     android:textSize="15sp" />
@@ -149,7 +145,6 @@
         android:layout_height="wrap_content"
         android:text="@string/weight"
         android:textColor="@color/text"
-        android:fontFamily="@font/inter_bold"
         android:textSize="15sp"
         android:layout_marginStart="22dp"
         android:layout_marginTop="20dp"
@@ -171,7 +166,7 @@
             android:layout_marginEnd="30dp">
 
             <ImageButton
-                android:id="@+id/weight_decrease"
+                android:id="@+id/weightDecrease"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginStart="5dp"
@@ -185,16 +180,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:fontFamily="@font/inter_bold"
                 android:gravity="center"
                 android:inputType="numberDecimal"
                 android:paddingTop="2dp"
-                android:text="@string/_56"
+                android:hint="0"
                 android:textColor="@color/edit_text"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/weight_increase"
-                app:layout_constraintStart_toEndOf="@id/weight_decrease"
+                app:layout_constraintStart_toEndOf="@id/weightDecrease"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
@@ -216,7 +210,6 @@
             android:layout_gravity="center"
             android:layout_marginEnd="20dp"
             android:textColor="@color/edit_text"
-            android:fontFamily="@font/inter_bold"
             android:textSize="15sp"/>
 
     </LinearLayout>
@@ -226,7 +219,6 @@
         android:layout_height="wrap_content"
         android:text="@string/height"
         android:textColor="@color/text"
-        android:fontFamily="@font/inter_bold"
         android:textSize="15sp"
         android:layout_marginStart="22dp"
         android:layout_marginTop="20dp"
@@ -262,9 +254,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:fontFamily="@font/inter_bold"
                 android:paddingTop="2dp"
-                android:text="@string/_19"
+                android:hint="0"
+                android:inputType="number"
                 android:textColor="@color/edit_text"
                 android:textSize="15sp"
                 android:gravity="center"
@@ -292,7 +284,6 @@
             android:layout_gravity="center"
             android:layout_marginEnd="20dp"
             android:textColor="@color/edit_text"
-            android:fontFamily="@font/inter_bold"
             android:textSize="15sp"/>
 
     </LinearLayout>
@@ -303,7 +294,6 @@
         android:layout_height="wrap_content"
         android:text="@string/age"
         android:textColor="@color/text"
-        android:fontFamily="@font/inter_bold"
         android:textSize="15sp"
         android:layout_marginStart="22dp"
         android:layout_marginTop="80dp"
@@ -340,11 +330,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:fontFamily="@font/inter_bold"
                 android:gravity="center"
                 android:inputType="number"
                 android:paddingTop="2dp"
-                android:text="@string/_19"
                 android:textColor="@color/edit_text"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -371,7 +359,6 @@
         android:backgroundTint="@color/button_color"
         android:text="@string/calculate"
         android:textSize="15sp"
-        android:fontFamily="@font/inter_black"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
         android:layout_marginTop="30dp"

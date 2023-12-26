@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.FastTrack" parent="Base.Theme.FastTrack" />
+
+    <style name="SplashApi" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/Screen_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@raw/anime</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <item name="postSplashScreenTheme">@style/Theme.FastTrack</item>
+    </style>
 </resources>

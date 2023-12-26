@@ -8,16 +8,15 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
+import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.mack.fasttrack.R
 import com.mack.fasttrack.databinding.ActivityMainScreenBinding
 
@@ -25,7 +24,7 @@ class MainScreen : AppCompatActivity() {
     private lateinit var binding : ActivityMainScreenBinding
     private  var currentWeight =0
     private  var currentHeight =0
-    private  var currentage =0
+    private  var currentAge =0
     private lateinit var weight: EditText
     private lateinit var height: EditText
     private lateinit var age: EditText
@@ -54,6 +53,8 @@ class MainScreen : AppCompatActivity() {
         btnHeightMinus = binding.tvHeightDecrease
         btnAgePlus = binding.ageIncrease
         btnAgeMinus = binding.ageDecrease
+
+
         val animation: Animation = AnimationUtils.loadAnimation(this, R.anim.cv_pop)
             binding.cvMale.setOnClickListener {
                 binding.maleSelection.setImageResource(R.drawable.selected_bg)
@@ -69,7 +70,7 @@ class MainScreen : AppCompatActivity() {
             }
         weight.text = Editable.Factory.getInstance().newEditable(currentWeight.toString())
         height.text = Editable.Factory.getInstance().newEditable(currentHeight.toString())
-        age.text = Editable.Factory.getInstance().newEditable(currentage.toString())
+        age.text = Editable.Factory.getInstance().newEditable(currentAge.toString())
 
         setupButtonWeight(btnWeightPlus,btnWeightMinus){
             currentWeight = it
@@ -78,7 +79,7 @@ class MainScreen : AppCompatActivity() {
             currentHeight = it
         }
         setupButtonAge(btnAgePlus,btnAgeMinus){
-            currentage = it
+            currentAge = it
         }
         binding.btnCalculate.setOnClickListener {
                 calculateBMI()
@@ -115,7 +116,7 @@ class MainScreen : AppCompatActivity() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (!s.isNullOrBlank()) {
-                    currentage = s.toString().toInt()
+                    currentAge = s.toString().toInt()
                 }
             }
 
@@ -123,7 +124,7 @@ class MainScreen : AppCompatActivity() {
         })
     }
     private fun calculateBMI() {
-        if(currentHeight> 0 && currentWeight >0 && currentage >0){
+        if(currentHeight> 0 && currentWeight >0 && currentAge >0){
             val heightInMeters = currentHeight.toDouble() / 100.0
             val bmi = currentWeight / (heightInMeters * heightInMeters)
             val intent = Intent(this,ResultActivity::class.java)
@@ -144,6 +145,7 @@ class MainScreen : AppCompatActivity() {
             weight.text = Editable.Factory.getInstance().newEditable(currentWeight.toString())
         }
         btnMinus.setOnClickListener {
+            Log.d("btnMinus", "Minus button visibility: ${btnMinus.visibility}")
             if (currentWeight > 0) {
                 currentWeight--
                 valueUpdater.invoke(currentWeight)
@@ -175,15 +177,15 @@ class MainScreen : AppCompatActivity() {
         function: (Int) -> Unit
     ) {
         btnAgePlus.setOnClickListener {
-            currentage++
-            function.invoke(currentage)
-            age.text = Editable.Factory.getInstance().newEditable(currentage.toString())
+            currentAge++
+            function.invoke(currentAge)
+            age.text = Editable.Factory.getInstance().newEditable(currentAge.toString())
         }
         btnAgeMinus.setOnClickListener {
-            if (currentage > 0) {
-                currentage--
-                function.invoke(currentage)
-                age.text = Editable.Factory.getInstance().newEditable(currentage.toString())
+            if (currentAge > 0) {
+                currentAge--
+                function.invoke(currentAge)
+                age.text = Editable.Factory.getInstance().newEditable(currentAge.toString())
             }
         }
     }
@@ -205,4 +207,5 @@ class MainScreen : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
 }

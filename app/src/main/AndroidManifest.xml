@@ -15,50 +15,25 @@
         android:theme="@style/Theme.FastTrack"
         tools:targetApi="31">
         <activity
-            android:name=".underweight.under_choice_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".normalweightui.NormalExerciseActivity"
-            android:exported="false" />
-        <activity
-            android:name=".normalweightui.NormalMealActivity"
-            android:exported="false" />
-        <activity
-            android:name=".normalweightui.Normal_choiceActivity"
-            android:exported="false" />
-        <activity
-            android:name=".overweightui.OverExerciseActivity"
-            android:exported="false" />
-        <activity
-            android:name=".overweightui.OverMealActivity"
-            android:exported="false" />
-        <activity
-            android:name=".overweightui.Over_choiceActivity"
-            android:exported="false" />
-        <activity
-            android:name=".underweight.Under_ExerciseActivity"
-            android:exported="false" />
-        <activity
-            android:name=".underweight.MealActivity"
-            android:exported="false" />
-        <activity
-            android:name=".underweight.Under_Meal_ExActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.ResultActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.MainScreen"
-            android:exported="true">
+            android:name=".ui.CustomSplashScreen"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
+            android:name=".ui.ResultActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ui.MainScreen"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>
