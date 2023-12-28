@@ -39,5 +39,4 @@ class ResultActivity : AppCompatActivity() {
             else -> "Overweight"
         }
     }
-
 }
