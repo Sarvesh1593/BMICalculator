@@ -1,18 +1,10 @@
 package com.mack.fasttrack.ui
 
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.TextView
-import com.github.mikephil.charting.charts.LineChart
-import com.github.mikephil.charting.components.XAxis
-import com.github.mikephil.charting.data.Entry
-import com.github.mikephil.charting.data.LineData
-import com.github.mikephil.charting.data.LineDataSet
 import com.mack.fasttrack.Graph.DonutChartBmi
-import com.mack.fasttrack.R
 import com.mack.fasttrack.databinding.ActivityResultBinding
 
 class ResultActivity : AppCompatActivity() {
