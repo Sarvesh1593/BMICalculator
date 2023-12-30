@@ -24,7 +24,7 @@ class MainScreen : AppCompatActivity() {
     private lateinit var binding : ActivityMainScreenBinding
     private  var currentWeight =0
     private  var currentHeight =0
-    private  var currentAge =0
+    private  var currentAge = 0
     private lateinit var weight: EditText
     private lateinit var height: EditText
     private lateinit var age: EditText
@@ -129,6 +129,10 @@ class MainScreen : AppCompatActivity() {
             val bmi = currentWeight / (heightInMeters * heightInMeters)
             val intent = Intent(this,ResultActivity::class.java)
             intent.putExtra("bmi",bmi.toFloat())
+            intent.putExtra("age",currentAge.toString())
+            Log.d("BMI",currentAge.toString())
+            intent.putExtra("weight",currentWeight.toString())
+            intent.putExtra("height",currentHeight.toString())
             startActivity(intent)
             Log.d("Main", "Sending BMI: $bmi")
 

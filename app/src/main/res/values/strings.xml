@@ -4,6 +4,7 @@
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="weight">Weight</string>
+    <string name="gender">Gender</string>
     <string name="kg">kg</string>
     <string name="_56">56</string>
     <string name="_19">19</string>
@@ -16,4 +17,12 @@
     <string name="_22_5">22.5</string>
     <string name="bmi_result">BMI RESULT</string>
     <string name="your_bmi_score">Your BMI Score</string>
+    <string name="weight_status">Weight Status</string>
+    <string name="BMI_Range">18.5 \- 25</string>
+    <string name="body_fat_percentage">Body Fat Percentage</string>
+    <string name="healthy_weight_range">Healthy Weight Range</string>
+    <string name="health_bmi_range">Health BMI Range</string>
+    <string name="range">Range</string>
+    <string name="_27_n_acceptable">27% \n(Acceptable)</string>
+    <string name="_41_63_56_25">41.63 - 56.25</string>
 </resources>

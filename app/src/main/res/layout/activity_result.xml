@@ -64,17 +64,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </FrameLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:orientation="vertical"
-        android:background="@drawable/value_bmi"
-        app:layout_constraintTop_toBottomOf="@id/frame_Chart">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
+        android:id="@+id/detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -121,7 +112,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Weight Status"
+                    android:text="@string/weight_status"
                     android:textColor="@color/black"/>
 
                 <TextView
@@ -130,8 +121,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:textSize="20sp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/button_color"/>
+                    android:layout_gravity="center"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -147,51 +137,122 @@
             android:orientation="horizontal"
             android:layout_gravity="center">
             <TextView
+                android:id="@+id/age"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/male"
-                android:layout_weight="1"
-                android:layout_marginEnd="20dp"/>
+                android:textColor="@color/black"
+                android:text="@string/age"/>
             <View
                 android:layout_width="1dp"
                 android:layout_height="20dp"
-                android:background="#45000000"
-                android:layout_marginEnd="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/age"
-                android:layout_weight="1"
-                android:layout_marginEnd="20dp"/>
-            <View
-                android:layout_width="1dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="10dp"
                 android:background="#45000000"
                 android:layout_marginEnd="20dp"/>
 
             <TextView
+                android:id="@+id/weight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/weight"
-                android:layout_weight="1"
-                android:layout_marginEnd="20dp"/>
+                android:textColor="@color/black"
+                android:text="@string/weight"/>
             <View
                 android:layout_width="1dp"
                 android:layout_height="20dp"
                 android:background="#45000000"
-                android:layout_marginEnd="20dp"/>
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="20dp"/>
             <TextView
+                android:id="@+id/height"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/height"
-                android:layout_weight="1"
-                android:layout_marginEnd="20dp"/>
+                android:textColor="@color/black"
+                android:text="@string/height"/>
         </LinearLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_margin="10dp"
             android:background="#45000000" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/health_bmi_range"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginEnd="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/healthy_weight_range"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginEnd="15dp"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="@string/body_fat_percentage"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/BMI_Range"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="45dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_41_63_56_25"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginEnd="60dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_27_n_acceptable"
+                android:textColor="@color/black"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_recalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button_color"
+        android:text="@string/recalculate"
+        android:textSize="15sp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/detail"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
