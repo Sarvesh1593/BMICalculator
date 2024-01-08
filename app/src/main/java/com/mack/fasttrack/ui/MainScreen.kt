@@ -34,7 +34,6 @@ class MainScreen : AppCompatActivity() {
     private lateinit var btnHeightMinus: ImageButton
     private lateinit var btnAgePlus : ImageButton
     private lateinit var btnAgeMinus : ImageButton
-
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,7 +52,6 @@ class MainScreen : AppCompatActivity() {
         btnHeightMinus = binding.tvHeightDecrease
         btnAgePlus = binding.ageIncrease
         btnAgeMinus = binding.ageDecrease
-
 
         val animation: Animation = AnimationUtils.loadAnimation(this, R.anim.cv_pop)
             binding.cvMale.setOnClickListener {
@@ -84,7 +82,6 @@ class MainScreen : AppCompatActivity() {
         binding.btnCalculate.setOnClickListener {
                 calculateBMI()
         }
-
         weight.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
@@ -93,11 +90,9 @@ class MainScreen : AppCompatActivity() {
                     currentWeight = s.toString().toInt()
                 }
             }
-
             override fun afterTextChanged(s: Editable?) {}
         })
-
-// Set a TextWatcher for height EditText
+        // Set a TextWatcher for height EditText
         height.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
@@ -119,7 +114,6 @@ class MainScreen : AppCompatActivity() {
                     currentAge = s.toString().toInt()
                 }
             }
-
             override fun afterTextChanged(s: Editable?) {}
         })
     }
@@ -135,12 +129,10 @@ class MainScreen : AppCompatActivity() {
             intent.putExtra("height",currentHeight.toString())
             startActivity(intent)
             Log.d("Main", "Sending BMI: $bmi")
-
         }else{
             Toast.makeText(this,"Please select",Toast.LENGTH_SHORT).show()
         }
     }
-
     // Replace your existing setupButtonAge function with this one
     private fun setupButtonWeight(btnPlus: ImageButton, btnMinus: ImageButton, valueUpdater: (Int) -> Unit) {
         btnPlus.setOnClickListener {
@@ -157,7 +149,6 @@ class MainScreen : AppCompatActivity() {
             }
         }
     }
-
     // Inside setupButtonHeight function
     private fun setupButtonHeight(btnHeightPlus: ImageButton, btnHeightMinus: ImageButton, valueUpdater: (Int) -> Unit) {
         btnHeightPlus.setOnClickListener {
@@ -173,7 +164,6 @@ class MainScreen : AppCompatActivity() {
             }
         }
     }
-
     // Inside setupButtonAge function
     private fun setupButtonAge(
         btnAgePlus: ImageButton,
@@ -211,5 +201,4 @@ class MainScreen : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-
 }

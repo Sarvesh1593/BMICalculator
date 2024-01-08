@@ -2,7 +2,9 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.FastTrack" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+<!--        status bar color-->
+        <item name="android:statusBarColor">@color/Screen_background</item>
+         <item name="colorPrimary">@color/Screen_background</item>
     </style>
 
     <style name="Theme.FastTrack" parent="Base.Theme.FastTrack" />
